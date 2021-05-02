@@ -17,3 +17,25 @@ Technologies:
 Launch:
 
     npm run dev
+
+Progress:
+
+    -character:
+		-list: name, picture - 
+		-detail: all fields, associated films - by ID - 
+		-crud:
+			- create - 
+			- update - 
+			- delete - 
+		-search: name, filter by age, weight, associated films
+
+	-film:
+		-list: title, creationdate, picture - READY
+		-detail: all fields, associated characters - by ID - READY (fields, need associations)
+		-crud:
+			- create - READY
+			- update - 
+			- delete - READY
+		-search: title, filter by genre. Allows order by asc or desc date
+
+	-auth
