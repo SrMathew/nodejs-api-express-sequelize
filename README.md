@@ -27,7 +27,7 @@ Progress:
 			- create - 
 			- update - 
 			- delete - 
-		-search: name, filter by age, weight, associated films
+		-search: name, filter by age, weight or associated films
 
 	-film:
 		-list: title, creationdate, picture - READY
