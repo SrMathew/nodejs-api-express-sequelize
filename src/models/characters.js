@@ -9,15 +9,24 @@ const characters = sequelize.define('characters', {
     },
     name: {
         type: Sequelize.TEXT,
+        allowNull: false,
+        uniqueness: true
     },
     picture: {
         type: Sequelize.BLOB
     },
     age: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        validate: {
+            isInt: true,
+            min: 1
+        }
     },
     weight: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        validate: {
+            min: 1
+        }
     },
     story: {
         type: Sequelize.TEXT
