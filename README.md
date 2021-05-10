@@ -25,8 +25,8 @@ Progress:
 		-detail: all fields, associated films - by ID - 
 		-crud:
 			- create - 
-			- update - 
-			- delete - 
+			- update -  - by Id
+			- delete -  - by Id
 		-search: name, filter by age, weight or associated films
 
 	-film:
@@ -34,8 +34,8 @@ Progress:
 		-detail: all fields, associated characters - by ID - READY (fields, need associations)
 		-crud:
 			- create - READY
-			- update - 
-			- delete - READY
+			- update - READY - by Id
+			- delete - READY - by Id
 		-search: title, filter by genre. Allows order by asc or desc date
 
 	-auth

@@ -11,7 +11,7 @@ export async function createFilm(req, res) {
             rating,
             genre
         }, {
-            fields: ['title', 'creationdate', 'rating', 'genre']
+            fields: ['title', 'picture', 'creationdate', 'rating', 'genre']
         });
         if(newFilm) {
             return res.json({
@@ -30,7 +30,33 @@ export async function createFilm(req, res) {
 };
 
 //editar una pelicula/serie
+export async function updateFilm(req, res){
+    try {
+        const { id } = req.params;
+        const { title, picture, creationdate, rating, genre } = req.body;
 
+        const films = await film.update({
+            title,
+            picture,
+            creationdate,
+            rating,
+            genre
+        },
+        {
+            where: { id }
+        }, {});
+            return res.json({
+                message: 'Updated film which id is: '+ id,
+                data: films
+            });
+        
+    } catch(e){
+        console.log(e);
+        res.status(500).json({
+            message: 'Something went wrong'
+        });
+    }
+};
 
 //eliminar una pelicula/serie
 export async function deleteFilm(req, res) {
