@@ -10,7 +10,7 @@ const characters = sequelize.define('characters', {
     name: {
         type: Sequelize.TEXT,
         allowNull: false,
-        uniqueness: true
+        unique: true
     },
     picture: {
         type: Sequelize.BLOB
