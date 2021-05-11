@@ -11,6 +11,4 @@ router.put('/:id', updateFilm);
 router.get('/', getFilms);
 router.get('/:id', getOneFilm);
 
-
-
 export default router;

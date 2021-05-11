@@ -80,12 +80,12 @@ export async function deleteFilm(req, res) {
 }
 
 //Listado de peliculas mostrando los campos: titulo, fecha de creacion e imagen
-export async function getFilm(req, res) {
+export async function getFilms(req, res) {
     try {
         const films = await film.findAll({
             attributes: ['title', 'creationdate', 'picture']
         });
-        res.json({
+        return res.json({
             data: films
         });
     } catch(e) {
@@ -105,7 +105,16 @@ export async function getOneFilm(req, res) {
                 id
             }
         });
-        res.json(films);
+        if(films){
+            return res.json({
+                data: films
+            });
+        } else {
+            return res.json({
+                message: 'Given id may not exist',
+                data: {}
+            });
+        }
     } catch(e) {
         console.log(e);
         res.status(500).json({

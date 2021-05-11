@@ -21,10 +21,10 @@ Launch:
 Progress:
 
     -character:
-		-list: name, picture - 
-		-detail: all fields, associated films - by ID - 
+		-list: name, picture - READY
+		-detail: all fields, associated films - by ID - READY (fields, need associations)
 		-crud:
-			- create - 
+			- create - READY
 			- update -  - by Id
 			- delete -  - by Id
 		-search: name, filter by age, weight or associated films
