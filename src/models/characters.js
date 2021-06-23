@@ -32,7 +32,7 @@ const characters = sequelize.define('characters', {
         type: Sequelize.TEXT
     }
 }, {
-    timestampes: false
+    timestamps: false
 });
 
 

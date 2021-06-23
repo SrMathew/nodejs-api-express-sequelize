@@ -22,7 +22,7 @@ const Films_Characters = sequelize.define('films_characters', {
         }
     }
 }, {
-    timestampes: false
+    timestamps: false
 });
 
 characters.belongsToMany(Film, { through: 'films_characters' });

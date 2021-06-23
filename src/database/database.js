@@ -3,9 +3,9 @@ import Sequelize from 'sequelize';
 export const sequelize = new Sequelize(
     'postgres',
     'postgres',
-    'password',
+    '',
     {
-        host: 'localhost',
+        host: '',
         dialect: 'postgres',
         pool: {
             max: 5,
